@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    height: 100vh;
+    width: 100vw;
+
+    p {
+        font-size: 18px;
+    }
+}
+
+.content-body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-radius: 1.5rem;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, .1);
+            // display: flex;
+            // border-radius: 1.5rem;
+            // width: 35%;
+            max-width: 675px;
+            // box-shadow: 10px 10px 20px rgba(0, 0, 0, .1);
+
+            .container-result {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                // width: 50%;
+                background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+                color: white;
+                border-radius: 1.5rem;
+
+                p {
+                    color: hsl(241, 100%, 89%);
+                }
+
+                span p {
+                    margin: 2rem 0 1.5rem;
+                    font-size: 22px;
+                }
+
+                .rating {
+                    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+                    padding: 2rem;
+                    border-radius: 50%;
+                    margin: 0 0 1.5rem;
+
+                    .big {
+                        color: white;
+                        font-size: 4rem;
+                        font-weight: 800;
+                        padding: 0 1rem;
+                    }
+                }
+
+                .description {
+                    width: 75%;
+
+                    p {
+                        margin: 1rem 0 2rem;
+                    }
+                }
+            }
+
+            .container-summary {
+                // width: 50%;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+
+                h1 {
+                    font-size: 1.5rem;
+                    font-weight: 800;
+                    margin: 0 0 1.5rem;
+                }
+
+                .summary {
+                    // display: grid;
+                    // display: flex;
+                    // flex-direction: column;
+
+                    .flex {
+                        display: flex;
+                        gap: 10px;
+                    }
+
+                    .between {
+                        justify-content: space-between;
+                        padding: .8rem;
+                        margin-bottom: 1rem;
+                        border-radius: .5rem;
+                    }
+                }
+
+                .continue {
+                    background-color: hsl(224, 30%, 27%);
+                    color: white;
+                    border: none;
+                    padding: 1rem;
+                    border-radius: 2rem;
+                    font-weight: 700;
+                    font-size: 15px;
+                    margin: 1rem 0 0;
+                    cursor: pointer;
+                }
+
+                .continue:hover {
+                    background: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+                }
+            }
+        }
+
+        @media screen and (max-width: 675px) {
+            .container {
+                height: auto;
+                display: grid;
+                grid-template-columns: 1fr;
+                border-radius: 0;
+                height: 100vh;
+                box-shadow: none;
+
+                .container-result {
+                    border-radius: 0 0 1.5rem 1.5rem;
+                }
+
+            }
+        }
+    }
+
+    @media screen and (max-width: 675px) {
+        .container-content {
+            display: block;
+        }
+    }
+}
